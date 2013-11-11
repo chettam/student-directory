@@ -23,3 +23,6 @@ puts "Giacomo Patella"
 puts "Michael Fisher"
 puts "Peter Kristo"
 puts "Kumaran Veluppillai"
+
+num_student = 23
+puts "Overall, we have #{num_student} great students"
