@@ -1,37 +1,48 @@
-# first, we print a list of all the students
-students = [["Tom Groombridge",:november],
-	["Tom Shacham", :november],
-	["James Graham", :november],
-	["Laura Young ", :november],
-	["Nick  Keszler", :november],
-	["Georgi Georgiev", :november],
-	["Jean-Baptiste Blanc", :november],
-	["Ken Scott", :november],
-	["Anath Abensour", :november],
-	["Erica Salvaneschi", :november],
-	["Chris Hill", :november],
-	["Asta Bevainyte", :november],
-	["Hannah Knights", :november],
-	["Simon Wolf", :november],
-	["Gianni Guitteaud", :november],
-	["James Brooke", :november],
-	["Bruce Steedman", :november],
-	["Jeremy Marer", :november],
-	["Nisar Tahir", :november],
-	["Giacomo Patella", :november],
-	["Michael Fisher", :november],
-	["Peter Kristo", :november],
-	["Kumaran Veluppillai":november]
-
-
-
-
-
+# first :cohort  => we print a list of all the students
+students = [
+	{:name =>"Tom Groombridge", :cohort  => :november},
+	{:name =>"Tom Shacham", :cohort  => :november},
+	{:name =>"James Graham", :cohort  => :november},
+	{:name =>"Laura Young ", :cohort  => :november},
+	{:name =>"Nick  Keszler", :cohort  => :november},
+	{:name =>"Georgi Georgiev", :cohort  => :november},
+	{:name =>"Jean-Baptiste Blanc", :cohort  => :november},
+	{:name =>"Ken Scott", :cohort  => :november},
+	{:name =>"Anath Abensour", :cohort  => :november},
+	{:name =>"Erica Salvaneschi", :cohort  => :november},
+	{:name =>"Chris Hill", :cohort  => :november},
+	{:name =>"Asta Bevainyte", :cohort  => :november},
+	{:name =>"Hannah Knights", :cohort  => :november},
+	{:name =>"Simon Wolf", :cohort  => :november},
+	{:name =>"Gianni Guitteaud", :cohort  => :november},
+	{:name =>"James Brooke", :cohort  => :november},
+	{:name =>"Bruce Steedman", :cohort  => :november},
+	{:name =>"Jeremy Marer", :cohort  => :november},
+	{:name =>"Nisar Tahir", :cohort  => :november},
+	{:name =>"Giacomo Patella", :cohort  => :november},
+	{:name =>"Michael Fisher", :cohort  => :november},
+	{:name =>"Peter Kristo", :cohort  => :november},
+	{:name =>"Kumaran Veluppillai", :cohort  => :november}
 ]
-puts "Students from my Cohort"
-puts "======================="
-# then we print the overall number of students
-students.each {	|student| 
-	puts student
-}
-puts "Overall, we have #{students.length} great students"
+# definition to display the header 
+def print_header
+	puts "Students from my Cohort at Makers Academy"
+	puts "========================================="
+
+end
+
+# definition to print name
+def display(names)
+	names.each  { |name|
+	 puts "#{name[:name]} (#{name[:cohort]} cohort)"	 
+	}
+end
+
+# definition to  print footer
+def  footer(names)
+	puts "Overall, we have #{names.length} great students"
+end
+
+print_header
+display(students)
+footer(students)
